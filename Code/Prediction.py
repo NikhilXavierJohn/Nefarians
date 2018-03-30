@@ -10,7 +10,7 @@ import pandas as pd
 import numpy as numpy
 import re
 import string
-dataset = pd.read_csv("uci-news-aggregator.csv")
+dataset = pd.read_csv("pruce.csv")
 def clean_text(s):
     s = s.lower()
     for ch in string.punctuation:                                                                                                     
