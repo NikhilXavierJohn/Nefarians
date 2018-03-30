@@ -2,6 +2,9 @@
   <qresource prefix="newPrefix">
     <file>Background.png</file>
   </qresource>
+  <qresource prefix="Background">
+    <file>background desktop.png</file>
+  </qresource>
   <qresource prefix="logo">
     <file>browse.png</file>
     <file>logo.png</file>
