@@ -1,3 +1,4 @@
+import warnings
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer, TfidfTransformer
 from sklearn.preprocessing import LabelEncoder
@@ -54,8 +55,13 @@ results_nb_cv = cross_val_score(nb, x_train, y_train, cv=10)
 # print(str(results_nb_cv.mean()*100)+"%")
 
 def predict_sentence(title):
-    cat_names = {'b' : 'business', 't' : 'science and technology', 'e' : 'entertainment', 'm' : 'health','ed' : 'Education', 'p' : 'politics', 'sp' : 'sports', 'w' : 'Weather','c' : 'Crime'}
+    cat_names = {'b' : 'business', 't' : 'science and technology', 'e' : 'entertainment', 'm' : 'health', 'w' : 'weather', 'ed' : 'education', 'c' : 'crime', 'r' : 'religion', 'p' : 'politics', 'sp' : 'sports'}
     cod = nb.predict(vectorizer.transform([title]))
     return cat_names[encoder.inverse_transform(cod)[0]]
 
+<<<<<<< HEAD
 print(predict_sentence("vitamins and minerals are essential for good health"))
+=======
+warnings.simplefilter('ignore', DeprecationWarning)
+print(predict_sentence("Cricket has been known as a gentleman's game."))
+>>>>>>> 472a4ffe928c74a35a0ccd7ac6401c519851622c

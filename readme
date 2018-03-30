@@ -2,7 +2,7 @@
     border: 2px solid grey;
     border-radius: 5px;
 }
-QProgressBar {
+QProgressBar::chunks {
     border: 2px solid grey;
     border-radius: 5px;
     text-align: center;
