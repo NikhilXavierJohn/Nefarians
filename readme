@@ -11,3 +11,31 @@ QProgressBar::chunks {
 
 way to link a url image to pyqt:
 https://stackoverflow.com/questions/24003043/pyqt4-and-python-3-display-an-image-from-url?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+
+for swipe view
+
+https://doc.qt.io/qt-5.10/qml-qtquick-controls2-swipeview.html
+
+
+custom slider
+
+Slider {
+    anchors.centerIn: parent
+    style: SliderStyle {
+        groove: Rectangle {
+            implicitWidth: 200
+            implicitHeight: 8
+            color: "gray"
+            radius: 8
+        }
+        handle: Rectangle {
+            anchors.centerIn: parent
+            color: control.pressed ? "white" : "lightgray"
+            border.color: "gray"
+            border.width: 2
+            implicitWidth: 34
+            implicitHeight: 34
+            radius: 12
+        }
+    }
+}
